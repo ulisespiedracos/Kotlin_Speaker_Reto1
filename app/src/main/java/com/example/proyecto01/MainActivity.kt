@@ -1,6 +1,9 @@
 package com.example.proyecto01
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val texto = findViewById<EditText>(R.id.etNombre).text
+
+        findViewById<Button>(R.id.btnIniciar).setOnClickListener {
+            Log.i("Boton", "El nombre es:  $texto" )
+        }
+
     }
 }
